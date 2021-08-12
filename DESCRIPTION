@@ -1,0 +1,14 @@
+Package: dataproofr
+Type: Package
+Title: A Proofreader for Your Data
+Version: 0.1.0
+Author: Nicu Calcea
+Maintainer: Nicu Calcea <mail@nicu.md>
+Description: Every day, more and more data is created. Journalists, analysts, and data visualizers turn that data into stories and insights.
+    But before you can make use of any data, you need to know if it’s reliable. Is it weird? Is it clean? Can I use it to write or make a viz?
+    This used to be a long manual process, using valuable time and introducing the possibility for human error. People can’t always spot every mistake every time, no matter how hard they try.
+    Data proofer is built to automate this process of checking a dataset for errors or potential mistakes.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
