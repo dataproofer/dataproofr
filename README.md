@@ -1,9 +1,7 @@
 dataproofr
 ================
 
-## Dataproofr
-
-Dataproofr is a wrapper for the excellent
+dataproofr is a wrapper for the excellent
 [dataproofer](https://github.com/dataproofer/Dataproofer) package. It
 automatically checks for a series of potential errors and mistakes in a
 dataset.
@@ -12,10 +10,13 @@ dataset.
 
 You can install `dataproofr` with the following command:
 
-Dataproofr uses the
+``` r
+remotes::install_github("nicucalcea/dataproofr")
+```
+
+dataproofr uses the
 [dataproofer](https://github.com/dataproofer/Dataproofer) NodeJS package
-under the hood, so it will need Node.js and npm installed on your
-device.
+under the hood, so it will need NodeJS and npm installed on your device.
 
 After installing the library, you can run `node_available()` to check
 whether the necessary software is installed. If it’s not, install it to
@@ -24,6 +25,10 @@ use `dataproofr`.
 After you’ve confirmed that NodeJS and npm are installed, run the
 following command to install
 [dataproofer](https://github.com/dataproofer/Dataproofer):
+
+``` r
+dataproofer_install()
+```
 
 ## Using dataproofr
 
@@ -45,8 +50,8 @@ proof(iris, tests = "core", verbose = TRUE)
 
     ## [1] 0
 
-Alternatively, you can use `proof_custom` with the arguments from the
-original NodeJS library:
+Alternatively, you can use `proof_custom()` with the arguments from the
+[original NodeJS library](https://github.com/dataproofer/Dataproofer):
 
 ``` r
 proof_custom(iris, options = "--core --summary")

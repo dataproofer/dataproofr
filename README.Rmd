@@ -8,25 +8,23 @@ knitr::opts_chunk$set(echo = TRUE)
 library(dataproofr)
 ```
 
-## Dataproofr
-
-Dataproofr is a wrapper for the excellent [dataproofer](https://github.com/dataproofer/Dataproofer) package. It automatically checks for a series of potential errors and mistakes in a dataset.
+dataproofr is a wrapper for the excellent [dataproofer](https://github.com/dataproofer/Dataproofer) package. It automatically checks for a series of potential errors and mistakes in a dataset.
 
 ## Installation
 
 You can install `dataproofr` with the following command: 
 
-```{r, echo=FALSE, eval=FALSE}
+```{r, eval=FALSE}
 remotes::install_github("nicucalcea/dataproofr")
 ```
 
-Dataproofr uses the [dataproofer](https://github.com/dataproofer/Dataproofer) NodeJS package under the hood, so it will need Node.js and npm installed on your device.
+dataproofr uses the [dataproofer](https://github.com/dataproofer/Dataproofer) NodeJS package under the hood, so it will need NodeJS and npm installed on your device.
 
 After installing the library, you can run `node_available()` to check whether the necessary software is installed. If it's not, install it to use `dataproofr`.
 
 After you've confirmed that NodeJS and npm are installed, run the following command to install [dataproofer](https://github.com/dataproofer/Dataproofer):
 
-```{r, echo=FALSE, eval=FALSE}
+```{r, eval=FALSE}
 dataproofer_install()
 ```
 
@@ -43,7 +41,7 @@ There are a few optional arguments you can use. Among other things, you can spec
 ```{r}
 proof(iris, tests = "core", verbose = TRUE)
 ```
-Alternatively, you can use `proof_custom` with the arguments from the original NodeJS library:
+Alternatively, you can use `proof_custom()` with the arguments from the [original NodeJS library](https://github.com/dataproofer/Dataproofer):
 
 ```{r}
 proof_custom(iris, options = "--core --summary")
