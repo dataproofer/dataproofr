@@ -38,8 +38,6 @@ The most straightforward to use the library is this:
 proof(iris)
 ```
 
-    ## [1] 0
-
 There are a few optional arguments you can use. Among other things, you
 can specify which tests to run with `tests` or you can output the result
 of the tests with `out`.
@@ -48,16 +46,12 @@ of the tests with `out`.
 proof(iris, tests = "core", verbose = TRUE)
 ```
 
-    ## [1] 0
-
 Alternatively, you can use `proof_custom()` with the arguments from the
 [original NodeJS library](https://github.com/dataproofer/Dataproofer):
 
 ``` r
 proof_custom(iris, options = "--core --summary")
 ```
-
-    ## [1] 0
 
 You can run `proof_custom(iris, options = "--help")` for a full list of
 commands.

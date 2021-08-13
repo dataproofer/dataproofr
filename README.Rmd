@@ -32,18 +32,18 @@ dataproofer_install()
 
 The most straightforward to use the library is this:
 
-```{r}
+```{r, eval=FALSE}
 proof(iris)
 ```
 
 There are a few optional arguments you can use. Among other things, you can specify which tests to run with `tests` or you can output the result of the tests with `out`.
 
-```{r}
+```{r, eval=FALSE}
 proof(iris, tests = "core", verbose = TRUE)
 ```
 Alternatively, you can use `proof_custom()` with the arguments from the [original NodeJS library](https://github.com/dataproofer/Dataproofer):
 
-```{r}
+```{r, eval=FALSE}
 proof_custom(iris, options = "--core --summary")
 ```
 
