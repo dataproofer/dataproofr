@@ -39,7 +39,9 @@ proof(iris)
 There are a few optional arguments you can use. Among other things, you can specify which suite of tests to run with `suite`, call individual tests with `tests`, or you can output the result of the tests to a local JSON file with `out`.
 
 ```{r, eval=FALSE}
-proof(iris, tests = c("duplicate rows", "empty cells"), out = "results.json", out_format = "json-pretty")
+proof(iris,
+      tests = c("duplicate rows", "empty cells"),
+      out = "results.json", out_format = "json-pretty")
 ```
 
 Alternatively, you can use `proof_custom()` with the arguments from the [original Node.js package](https://github.com/dataproofer/Dataproofer):

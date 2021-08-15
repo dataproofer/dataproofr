@@ -45,7 +45,9 @@ tests with `tests`, or you can output the result of the tests to a local
 JSON file with `out`.
 
 ``` r
-proof(iris, tests = c("duplicate rows", "empty cells"), out = "results.json", out_format = "json-pretty")
+proof(iris,
+      tests = c("duplicate rows", "empty cells"),
+      out = "results.json", out_format = "json-pretty")
 ```
 
 Alternatively, you can use `proof_custom()` with the arguments from the

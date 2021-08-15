@@ -25,7 +25,9 @@
 #' @examples
 #' proof(mtcars)
 #'
-#' proof(iris, tests = c("duplicate rows", "empty cells"), out = "results.json", out_format = "json-pretty")
+#' proof(iris,
+#'       tests = c("duplicate rows", "empty cells"),
+#'       out = "results.json", out_format = "json-pretty")
 #'
 #' proof(PlantGrowth, suite = "stats", verbose = TRUE)
 
