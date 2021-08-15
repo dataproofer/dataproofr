@@ -9,9 +9,13 @@
 #' @importFrom utils write.csv
 #'
 #' @export
+#'
+#' @examples
+#'
+#' proof_custom(iris, options = "--core --summary")
 
 proof_custom <- function(data, options = "") {
-  write.csv(data, file = paste0(tempdir(), "/dataproofr_export.csv"), row.names = F)
+  write.csv(data, file = paste0(tempdir(), "/", deparse(substitute(data)), ".csv"), row.names = F)
 
-  system(paste0("dataproofer ", tempdir(), "/dataproofr_export.csv ", options))
+  system(paste0("dataproofer ", tempdir(), "/", deparse(substitute(data)), ".csv ", options))
 }

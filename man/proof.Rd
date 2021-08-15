@@ -6,18 +6,21 @@
 \usage{
 proof(
   data,
-  tests = "all",
-  out = F,
+  suite = "all",
+  tests = "none",
+  out = FALSE,
   out_format = "json",
-  summary = F,
-  verbose = F,
-  exclude = F
+  summary = FALSE,
+  verbose = FALSE,
+  exclude = FALSE
 )
 }
 \arguments{
 \item{data}{Tibble or dataframe to test.}
 
-\item{tests}{Which tests do you want to perform? Defaults to "all", other options include "core", "info", "stats" and "geo".}
+\item{suite}{Which suite of tests do you want to perform? Defaults to "all", other options include "core", "info", "stats" and "geo".}
+
+\item{tests}{Which individual tests do you want to perform?}
 
 \item{out}{Export the results to a json file. Specify a path to export.}
 
@@ -29,4 +32,11 @@ proof(
 }
 \description{
 Specify a tibble or dataframe and perform automated data proofing tests.
+}
+\examples{
+proof(mtcars)
+
+proof(iris, tests = c("duplicate rows", "empty cells"), out = "results.json", out_format = "json-pretty")
+
+proof(PlantGrowth, suite = "stats", verbose = TRUE)
 }

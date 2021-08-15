@@ -14,3 +14,7 @@ proof_custom(data, options = "")
 \description{
 Proof tabular data.
 }
+\examples{
+
+proof_custom(iris, options = "--core --summary")
+}

@@ -9,9 +9,8 @@
 
 dataproofer_install <- function(force = F) {
   if (!force) {
-    message("Would you like to install the dataproofer Node library? Type 1 for yes and 0 for no.")
+    message("Would you like to install the dataproofer Node.js library? Type 1 for yes and 0 for no.")
     consent <- readline(prompt = "Yes (1) or no (0)?: ")
-
     consent = ifelse(consent %in% c(1, "Yes", "YES", "yes", "Y", "y"), T, F)
     } else {
       consent = T

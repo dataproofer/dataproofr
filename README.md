@@ -2,9 +2,10 @@ dataproofr
 ================
 
 dataproofr is a wrapper for the excellent
-[dataproofer](https://github.com/dataproofer/Dataproofer) package. It
-automatically checks for a series of potential errors and mistakes in a
-dataset.
+[Dataproofer](https://github.com/dataproofer/Dataproofer) Node.js
+package. It automatically checks for a series of potential errors and
+mistakes in a dataset. It ca check for missing or duplicated data,
+database export errors, invalid geographical coordinates and more.
 
 ## Installation
 
@@ -14,17 +15,17 @@ You can install `dataproofr` with the following command:
 remotes::install_github("nicucalcea/dataproofr")
 ```
 
-dataproofr uses the
-[dataproofer](https://github.com/dataproofer/Dataproofer) NodeJS package
-under the hood, so it will need NodeJS and npm installed on your device.
+Since dataproofr uses the
+[Dataproofer](https://github.com/dataproofer/Dataproofer) package under
+the hood, it will need [Node.js](https://nodejs.org/en/download/) and
+[npm](https://www.npmjs.com/package/download) installed on your device.
 
-After installing the library, you can run `node_available()` to check
-whether the necessary software is installed. If it’s not, install it to
-use `dataproofr`.
+You can run `node_available()` to check whether the necessary software
+is installed. If it’s not, install it to use `dataproofr`.
 
-After you’ve confirmed that NodeJS and npm are installed, run the
+After you’ve confirmed that Node.js and npm are installed, run the
 following command to install
-[dataproofer](https://github.com/dataproofer/Dataproofer):
+[Dataproofer](https://github.com/dataproofer/Dataproofer):
 
 ``` r
 dataproofer_install()
@@ -32,22 +33,23 @@ dataproofer_install()
 
 ## Using dataproofr
 
-The most straightforward to use the library is this:
+The most straightforward way to use the library is this:
 
 ``` r
 proof(iris)
 ```
 
 There are a few optional arguments you can use. Among other things, you
-can specify which tests to run with `tests` or you can output the result
-of the tests with `out`.
+can specify which suite of tests to run with `suite`, call individual
+tests with `tests`, or you can output the result of the tests to a local
+JSON file with `out`.
 
 ``` r
-proof(iris, tests = "core", verbose = TRUE)
+proof(iris, tests = c("duplicate rows", "empty cells"), out = "results.json", out_format = "json-pretty")
 ```
 
 Alternatively, you can use `proof_custom()` with the arguments from the
-[original NodeJS library](https://github.com/dataproofer/Dataproofer):
+[original Node.js package](https://github.com/dataproofer/Dataproofer):
 
 ``` r
 proof_custom(iris, options = "--core --summary")

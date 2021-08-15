@@ -33,8 +33,8 @@ node_available <- function(){
   )
 
   if (test != 0) {
-    warning("Please install Node.")
+    warning("Please install Node.js.")
   } else {
-    message("Node successfully detected.")
+    message("Node.js successfully detected.")
   }
 }

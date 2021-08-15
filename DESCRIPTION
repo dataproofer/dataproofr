@@ -1,7 +1,7 @@
 Package: dataproofr
 Type: Package
 Title: A Proofreader for Your Data
-Version: 0.1.0
+Version: 0.1.1
 Author: Nicu Calcea
 Maintainer: Nicu Calcea <mail@nicu.md>
 Description: Every day, more and more data is created. Journalists, analysts, and data visualizers turn that data into stories and insights.
