@@ -47,7 +47,7 @@ R Terminal
 echo $PATH
 ```
 
-If they do not match, you can synchronize the two by creating an `~/.Renviron` file
+If they do not match, you can synchronize the two by creating an `~/.Renviron` file in the terminal.
 
 ```sh
 touch ~/.Renviron; R_PATH="PATH=$PATH"; echo $R_PATH > ~/.Renviron
