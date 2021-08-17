@@ -33,23 +33,26 @@ dataproofer_install()
 
 ### RStudio
 
-If you're an RStudio user, double-check that your R Console and R Terminal are using the same environments to ensure you're using the same version of Node.js and Dataproofer.
+If you’re an RStudio user, double-check that your R Console and R
+Terminal are using the same environments to ensure you’re using the same
+version of Node.js and Dataproofer.
 
 R Console
 
-```r
+``` r
 Sys.getenv("PATH")
 ```
 
 R Terminal
 
-```sh
+``` sh
 echo $PATH
 ```
 
-If they do not match, you can synchronize the two by creating an `~/.Renviron` file in the terminal.
+If they do not match, you can synchronize the two by creating an
+`~/.Renviron` file in the terminal.
 
-```sh
+``` sh
 touch ~/.Renviron; R_PATH="PATH=$PATH"; echo $R_PATH > ~/.Renviron
 ```
 
