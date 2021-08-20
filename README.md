@@ -12,7 +12,7 @@ database export errors, invalid geographical coordinates and more.
 You can install `dataproofr` with the following command:
 
 ``` r
-remotes::install_github("nicucalcea/dataproofr")
+remotes::install_github("Dataproofer/dataproofr")
 ```
 
 Since dataproofr uses the
