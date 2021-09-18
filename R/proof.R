@@ -4,6 +4,8 @@
 #'
 #' @param data Tibble or dataframe to test.
 #'
+#' @param row.names Do you want to include row names in your analysis? Defaults to `FALSE`.
+#'
 #' @param suite Which suite of tests do you want to perform? Defaults to "all", other options include "core", "info", "stats" and "geo".
 #'
 #' @param tests Which individual tests do you want to perform?
@@ -31,8 +33,9 @@
 #'
 #' proof(PlantGrowth, suite = "stats", verbose = TRUE)
 
-proof <- function(data, suite = "all", tests = "none", out = FALSE, out_format = "json", summary = FALSE, verbose = FALSE, exclude = FALSE) {
-  write.csv(data, file = paste0(tempdir(), "/", deparse(substitute(data)), ".csv"), row.names = F)
+proof <- function(data, row.names = FALSE, suite = "all", tests = "none", out = FALSE, out_format = "json", summary = FALSE, verbose = FALSE, exclude = FALSE) {
+
+  write.csv(data, file = paste0(tempdir(), "/", deparse(substitute(data)), ".csv"), row.names = row.names)
   arguments <- paste0(
     "dataproofer ",
     tempdir(), "/", deparse(substitute(data)), ".csv",
